@@ -62,6 +62,16 @@ executable servant-cookbook
                      , aeson
                      , wai
                      , warp
+                     , text >= 1.2
+                     , servant
+                     , servant-client
+                     , markdown-unlit >= 0.4
+                     , http-client >= 0.5
+                     , sqlite-simple >= 0.4
+                     , transformers
+                     , postgresql-simple >= 0.5
+                     , resource-pool >= 0.2
+                     , bytestring
   
   -- Directories containing source files.
   hs-source-dirs:      src
