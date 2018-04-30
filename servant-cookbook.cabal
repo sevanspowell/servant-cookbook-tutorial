@@ -72,6 +72,7 @@ executable servant-cookbook
                      , postgresql-simple >= 0.5
                      , resource-pool >= 0.2
                      , bytestring
+                     , stm
   
   -- Directories containing source files.
   hs-source-dirs:      src
