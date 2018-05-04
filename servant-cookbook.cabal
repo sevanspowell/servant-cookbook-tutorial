@@ -58,21 +58,19 @@ executable servant-cookbook
   
   -- Other library packages from which modules are imported.
   build-depends:       base >=4.9 && <4.10
-                     , servant-server >= 0.5
                      , aeson
-                     , wai
-                     , warp
-                     , text >= 1.2
+                     , bytestring
+                     , http-client
+                     , markdown-unlit
+                     , postgresql-simple
+                     , resource-pool
                      , servant
                      , servant-client
-                     , markdown-unlit >= 0.4
-                     , http-client >= 0.5
-                     , sqlite-simple >= 0.4
-                     , transformers
-                     , postgresql-simple >= 0.5
-                     , resource-pool >= 0.2
-                     , bytestring
+                     , servant-server
+                     , sqlite-simple
                      , stm
+                     , text
+                     , transformers
   
   -- Directories containing source files.
   hs-source-dirs:      src
