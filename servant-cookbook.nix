@@ -1,7 +1,7 @@
-{ mkDerivation, aeson, base, bytestring, http-client
-, markdown-unlit, postgresql-simple, resource-pool, servant
-, servant-client, servant-server, sqlite-simple, stdenv, stm, text
-, transformers
+{ mkDerivation, aeson, base, bytestring, containers, http-client
+, jose, markdown-unlit, postgresql-simple, resource-pool, servant
+, servant-auth, servant-auth-server, servant-client, servant-server
+, sqlite-simple, stdenv, stm, text, transformers, wai, warp
 }:
 mkDerivation {
   pname = "servant-cookbook";
@@ -10,9 +10,10 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    aeson base bytestring http-client markdown-unlit postgresql-simple
-    resource-pool servant servant-client servant-server sqlite-simple
-    stm text transformers
+    aeson base bytestring containers http-client jose markdown-unlit
+    postgresql-simple resource-pool servant servant-auth
+    servant-auth-server servant-client servant-server sqlite-simple stm
+    text transformers wai warp
   ];
   license = stdenv.lib.licenses.bsd3;
 }

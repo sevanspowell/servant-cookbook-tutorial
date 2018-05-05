@@ -60,17 +60,23 @@ executable servant-cookbook
   build-depends:       base >=4.9 && <4.10
                      , aeson
                      , bytestring
+                     , containers
                      , http-client
+                     , jose
                      , markdown-unlit
                      , postgresql-simple
                      , resource-pool
                      , servant
                      , servant-client
                      , servant-server
+                     , servant-auth
+                     , servant-auth-server
                      , sqlite-simple
                      , stm
                      , text
                      , transformers
+                     , wai
+                     , warp
   
   -- Directories containing source files.
   hs-source-dirs:      src
