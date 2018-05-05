@@ -51,11 +51,11 @@ server = getBooks :<|> addBook
       liftIO $ atomically $ readTVar p >>= writeTVar p . (book :)
       pure book
 
-nt :: State -> AppM a -> Handler a
-nt s x = runReaderT x s
+nt :: State -> (AppM :~> Handler)
+nt s = NT $ flip runReaderT s
 
 app :: State -> Application
-app s = serve api $ hoistServer api (nt s) server
+app s = serve api $ enter (nt s) server
 
 clientMain :: IO ()
 clientMain = do
