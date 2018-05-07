@@ -11,8 +11,10 @@ import qualified StructuringAPIs (app)
 import qualified SQLiteDatabase (clientMain)
 import qualified PostgreSQL (clientMain)
 import qualified CustomMonad (clientMain)
+import qualified JWTAuth (clientMain)
 
 main :: IO ()
 -- main = run 8080 StructuringAPIs.app
 -- main = PostgreSQL.clientMain
-main = CustomMonad.clientMain
+-- main = CustomMonad.clientMain
+main = JWTAuth.clientMain
